@@ -1,15 +1,25 @@
 // NEW
-const UPDATE_INTERVAL = 60000;
+const UPDATE_INTERVAL = 30000; // 30 seconds
 const END_OF_SCHEDULE = new Date("2024-04-21T24:00:00");
 
 const performanceSchedule = getPerformanceSchedule();
+
 updatePerformances(performanceSchedule, "delta");
-setInterval(() => updatePerformances(performanceSchedule, "delta"), UPDATE_INTERVAL);
+let intervalId = setInterval(
+  () => updatePerformances(performanceSchedule, "delta"),
+  UPDATE_INTERVAL
+);
 
 const inputContainer = document.getElementById("input-container");
+
 inputContainer.addEventListener("input", (e) => {
   const inputValue = e.target.value;
   updatePerformances(performanceSchedule, inputValue);
+  clearInterval(intervalId);
+  intervalId = setInterval(
+    () => updatePerformances(performanceSchedule, inputValue),
+    UPDATE_INTERVAL
+  );
 });
 
 function getPerformanceSchedule() {
