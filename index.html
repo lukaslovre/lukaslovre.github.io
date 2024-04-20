@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drito raspored</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- press start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- VT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="current-performance-container">
+      <h1>now performing</h1>
+      <p id="currentPerformance"></p>
+    </div>
+
+    <div class="next-performances-container">
+      <div class="titleAndInput">
+        <h1>Up Next</h1>
+
+        <div id="input-container">
+          <!-- radio -->
+          <input type="radio" name="deltaOrAbs" id="delta" value="delta" checked />
+          <label for="delta">DELTA</label>
+          <input type="radio" name="deltaOrAbs" id="abs" value="abs" />
+          <label for="abs">ABS</label>
+        </div>
+      </div>
+      <ul id="futurePerformances"></ul>
+    </div>
+  </body>
+</html>
